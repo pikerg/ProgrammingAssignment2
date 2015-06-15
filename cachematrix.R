@@ -1,4 +1,29 @@
 ## Create a cashed inverse of a matrix
+##
+##Use Case
+##
+##  > m <- matrix(c(-1, -2, 1, 1), 2,2)
+##  > x <- makeCacheMatrix(m)
+##  > x$get()
+##
+##       [,1] [,2]
+##  [1,]   -1    1
+##  [2,]   -2    1
+##
+##  > inv <- cacheSolve(x)
+##  > inv
+##
+##  [,1] [,2]
+##  [1,]    1   -1
+##  [2,]    2   -1
+##
+##  > inv <- cacheSolve(x)
+##  getting cached data
+##  > inv
+##
+##  [,1] [,2]
+##  [1,]    1   -1
+##  [2,]    2   -1
 
 ##This function creates a special "matrix" object that can cache its inverse.
 makeCacheMatrix <- function(x = matrix()) {
